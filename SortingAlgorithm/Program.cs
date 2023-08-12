@@ -64,7 +64,6 @@ namespace SortingAlgorithm
             //Console.WriteLine();
             //Console.WriteLine(sayac);
 
-
             Console.ReadLine();
 
             int[] diziler = { 1, 2, 56, 33, 74, 3 };
