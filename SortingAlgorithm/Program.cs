@@ -174,15 +174,78 @@ namespace SortingAlgorithm
             //Console.ReadLine();
 
             //girilen sayinin asal carpanlarini yazdirma
-            //75 - 3 
-            //25 - 5
-            //5 - 5
-            Console.Write("Asal carpanlarina ayrilacak sayiyi gir :");
-            int girilenSayi = int.Parse(Console.ReadLine());
-            int sayi = (girilenSayi / 2) + 2;//2 ve 3 degerleri girilirse..
-            //int kareKok = (int)Math.Sqrt(girilenSayi);
-            Dictionary<int, int> asalCarpanlar = new Dictionary<int, int>();
-            for (int i = 2; i <= sayi; i++)
+            //Console.Write("Asal carpanlarina ayrilacak sayiyi gir :");
+            //int girilenSayi = int.Parse(Console.ReadLine());
+            //int sayi = (girilenSayi / 2) + 2;//2 ve 3 degerleri girilirse..
+            ////int kareKok = (int)Math.Sqrt(girilenSayi);
+            //Dictionary<int, int> asalCarpanlar = new Dictionary<int, int>();
+            //for (int i = 2; i <= sayi; i++)
+            //{
+            //    int carpanAdedi = 0;
+            //    while (girilenSayi % i == 0)
+            //    {
+            //        carpanAdedi++;
+            //        if (asalCarpanlar.ContainsKey(i))
+            //        {
+            //            asalCarpanlar[i] = carpanAdedi;
+            //        }
+            //        else
+            //        {
+            //            asalCarpanlar.Add(i, carpanAdedi);
+            //        }
+            //        girilenSayi = girilenSayi / i;
+            //    }
+            //}
+            //foreach (var asalCarpan in asalCarpanlar)
+            //{
+            //    Console.WriteLine(asalCarpan);
+            //}
+            //Console.ReadLine();
+
+
+            /*
+            * 1 + 2 = 3
+            * 4 + 5 + 6 = 7 + 8
+            * 9 + 10 + 11 + 12 = 13 + 14 + 15
+            * 16 + 17 + 18 + 19 + 20 = 21 + 22 + 23 + 24
+            
+            * (n) + (n+1) + (n+2) + ... + (n+k) = (n+k+1) + (n+k+2) + ... + (n+k+)
+            * 
+            * n+k = soldaki sondaki terim
+            * soldaki terim sayisi k + 1
+            * 
+            * sağdaki terim sayisi k
+            * n = 16 ise k = 4, n = 9 ise k = 3 ..
+            
+            */
+
+            Console.WriteLine("kaç satır görmek istiyorsunuz:");
+
+            int row = Convert.ToInt32(Console.ReadLine());
+
+            int countInRow = 0;
+            for (int i = 1; i < row + 1; i++)
+            {
+                int firstTerm = i * i;
+                countInRow = ((i - 1) * 2) + 3;
+                for (int j = 0; j < countInRow; j++)
+                {
+                    if (j == i * 2) //rowdaki son terimi ifade eder
+                    {
+                        Console.Write(firstTerm);
+                    }
+                    else if (j == i)
+                    {
+                        Console.Write($"{firstTerm} = ");
+                    }
+                    else
+                    {
+                        Console.Write($"{firstTerm} + ");
+                    }
+                    firstTerm++;
+                }
+                Console.WriteLine();
+            }
             {
                 int carpanAdedi = 0;
                 while (girilenSayi % i == 0)
