@@ -219,53 +219,120 @@ namespace SortingAlgorithm
             
             */
 
-            Console.WriteLine("kaç satır görmek istiyorsunuz:");
+            //Console.WriteLine("kaç satır görmek istiyorsunuz:");
 
-            int row = Convert.ToInt32(Console.ReadLine());
+            //int row = Convert.ToInt32(Console.ReadLine());
 
-            int countInRow = 0;
-            for (int i = 1; i < row + 1; i++)
+            //int countInRow = 0;
+            //for (int i = 1; i < row + 1; i++)
+            //{
+            //    int firstTerm = i * i;
+            //    countInRow = ((i - 1) * 2) + 3;
+            //    for (int j = 0; j < countInRow; j++)
+            //    {
+            //        if (j == i * 2) //rowdaki son terimi ifade eder
+            //        {
+            //            Console.Write(firstTerm);
+            //        }
+            //        else if (j == i)
+            //        {
+            //            Console.Write($"{firstTerm} = ");
+            //        }
+            //        else
+            //        {
+            //            Console.Write($"{firstTerm} + ");
+            //        }
+            //        firstTerm++;
+            //    }
+            //    Console.WriteLine();
+            //}
+
+
+
+            string response = string.Empty;
+
+            int jack = 10;
+            int queen = 10;
+            int king = 10;
+            int ace = 11;
+
+            int[] sayilar = { 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, king, ace };
+
+            Random rnd = new Random();
+
+            int elimdekilerToplami = 0;
+            int gelenSayi = 0;
+            int bilgisayarinEli = 0;
+            string bilgisayarinKartlari = "";
+            do
             {
-                int firstTerm = i * i;
-                countInRow = ((i - 1) * 2) + 3;
-                for (int j = 0; j < countInRow; j++)
+                for (int i = 0; i < 4; i++)
                 {
-                    if (j == i * 2) //rowdaki son terimi ifade eder
+                    if (i < 2)
                     {
-                        Console.Write(firstTerm);
-                    }
-                    else if (j == i)
-                    {
-                        Console.Write($"{firstTerm} = ");
+                        gelenSayi = rnd.Next(0, sayilar.Length);
+                        elimdekilerToplami += sayilar[gelenSayi];
+                        Console.WriteLine($"Kartlarim: {sayilar[gelenSayi]}");
                     }
                     else
                     {
-                        Console.Write($"{firstTerm} + ");
+                        while (bilgisayarinEli <= 11)
+                        {
+                            gelenSayi = rnd.Next(0, sayilar.Length);
+                            bilgisayarinKartlari += gelenSayi + ", ";
+                            bilgisayarinEli += sayilar[gelenSayi];
+                        }
                     }
-                    firstTerm++;
                 }
-                Console.WriteLine();
-            }
-            {
-                int carpanAdedi = 0;
-                while (girilenSayi % i == 0)
+
+                Console.WriteLine("Kart cek: Y\nsonucu gor: any tus");
+
+                response = Console.ReadLine();
+                do
                 {
-                    carpanAdedi++;
-                    if (asalCarpanlar.ContainsKey(i))
+                    if (response == "y".ToLower() || response == "Y".ToLower())
                     {
-                        asalCarpanlar[i] = carpanAdedi;
+                        gelenSayi = rnd.Next(0, sayilar.Length);
+                        Console.WriteLine("cektigin kart: " + sayilar[gelenSayi]);
+                        elimdekilerToplami += sayilar[gelenSayi];
+                        if (elimdekilerToplami > 21)
+                        {
+                            Console.WriteLine("elindekilerin toplami: " + elimdekilerToplami + " GAMEOVER");
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("elindekiler toplami: " + elimdekilerToplami);
+                            Console.WriteLine("bir kart daha cekmek ister misin? E/H");
+                            response = Console.ReadLine();
+                        }
                     }
                     else
                     {
-                        asalCarpanlar.Add(i, carpanAdedi);
+                        if (bilgisayarinEli >= elimdekilerToplami)
+                        {
+                            Console.WriteLine($"Bilgisayarin Kartlari: { bilgisayarinKartlari}");
+                            Console.WriteLine($"Bilgisayarin eli: {bilgisayarinEli} >= {elimdekilerToplami} GAMEOVER");
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"elimdekiler toplami: {elimdekilerToplami} > bilgisayarin eli{bilgisayarinEli} KAZANDIM");
+                            break;
+                        }
                     }
-                    girilenSayi = girilenSayi / i;
-                }
-            }
-            foreach (var asalCarpan in asalCarpanlar)
-            {
-                Console.WriteLine(asalCarpan);
-            }
+                } while (response != "n");
+
+                Console.WriteLine("1 el daha oynamak ister misin? E/H");
+
+                response = Console.ReadLine();
+
+                elimdekilerToplami = 0;
+                bilgisayarinEli = 0;
+
+            } while (response != "H".ToLower());
+
+
             Console.ReadLine();
         }
 
