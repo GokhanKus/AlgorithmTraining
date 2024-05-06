@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -44,7 +45,7 @@ namespace SortingAlgorithm
 
             //BubbleSort Algorithm
             //int[] unSorted = { 1, 5, 0, 6, 22, 7, 4, 73 };
-            //int[] unSorted = { 5, 1, 6, 0, 73, 22, 7, 4 };
+            ////int[] unSorted = { 5, 1, 6, 0, 73, 22, 7, 4 };
             //int sayac = 0;
             //int buyukEleman = 0;
             //for (int i = 0; i < unSorted.Length; i++)
@@ -165,22 +166,23 @@ namespace SortingAlgorithm
             //    }
             //}
             //Console.WriteLine(splitingLine);
+
             //foreach (var duplicatedMovie in duplicatedOnes)
             //{
             //    Console.Write($"birden fazla eklenen filmler: {duplicatedMovie}\n");
             //}
+
             //Console.WriteLine(splitingLine);
             //Console.WriteLine($"duplikeleri sildikten sonra {totalMovieCount} adet film kaldi");
 
-            //Console.ReadLine();
 
             //girilen sayinin asal carpanlarini yazdirma
             //Console.Write("Asal carpanlarina ayrilacak sayiyi gir :");
             //int girilenSayi = int.Parse(Console.ReadLine());
-            //int sayi = (girilenSayi / 2) + 2;//2 ve 3 degerleri girilirse..
-            ////int kareKok = (int)Math.Sqrt(girilenSayi);
+            //int sayi = (girilenSayi / 2) + 1;//2 ve 3 degerleri girilirse..
+            //bool asalmi = true;
             //Dictionary<int, int> asalCarpanlar = new Dictionary<int, int>();
-            //for (int i = 2; i <= sayi; i++)
+            //for (int i = 2; i < sayi; i++)
             //{
             //    int carpanAdedi = 0;
             //    while (girilenSayi % i == 0)
@@ -195,12 +197,22 @@ namespace SortingAlgorithm
             //            asalCarpanlar.Add(i, carpanAdedi);
             //        }
             //        girilenSayi = girilenSayi / i;
+
+            //        asalmi = false; //eger while dongusune girdiyse asal degildir
             //    }
             //}
+            //if (asalmi)
+            //{
+            //    asalCarpanlar.Add(girilenSayi, 1);
+            //    Console.WriteLine($"{girilenSayi} bir asal sayidir.");
+            //}
+            //int bolenSayilarToplami = 1;
             //foreach (var asalCarpan in asalCarpanlar)
             //{
-            //    Console.WriteLine(asalCarpan);
+            //    bolenSayilarToplami *= asalCarpan.Value + 1;
+            //    Console.WriteLine($"asal carpanlar: {asalCarpan}");
             //}
+            //Console.WriteLine($"sayinin toplam {bolenSayilarToplami} adet boleni vardır");
             //Console.ReadLine();
 
 
@@ -247,6 +259,7 @@ namespace SortingAlgorithm
             //    }
             //    Console.WriteLine();
             //}
+
             #region BlackJack
             //string response = string.Empty;
 
@@ -284,7 +297,7 @@ namespace SortingAlgorithm
             //    }
 
             //    Console.WriteLine("Kart cek: Y\nsonucu gor: any tus");
-
+            //    Console.WriteLine(new string('-',60));
             //    response = Console.ReadLine();
             //    do
             //    {
@@ -309,7 +322,7 @@ namespace SortingAlgorithm
             //        {
             //            if (bilgisayarinEli >= elimdekilerToplami)
             //            {
-            //                Console.WriteLine($"Bilgisayarin Kartlari: {bilgisayarinKartlari}");
+            //                Console.WriteLine($"Bilgisayarin Kartlari: {bilgisayarinKartlari}"); //burasi duzgun calismiyor sonra bak.
             //                Console.WriteLine($"Bilgisayarin eli: {bilgisayarinEli} >= {elimdekilerToplami} GAMEOVER");
             //                break;
             //            }
@@ -322,6 +335,7 @@ namespace SortingAlgorithm
             //    } while (response != "n");
 
             //    Console.WriteLine("1 el daha oynamak ister misin? E/H");
+            //    Console.WriteLine(new string('-',60));
 
             //    response = Console.ReadLine();
 
@@ -351,9 +365,13 @@ namespace SortingAlgorithm
 
             //long q = 9223372036854775807; long 8 byte'dır yani 64 bit ve alabilecegi max deger 2^64 -1 dir = 9223372036854775807 (19 basamaklı)
             //int w = 2147483647;            int 4 byte'dır yani 32 bit ve alabilecegi max deger 2^32 -1 dir = 2147483647          (10 basamaklı)
-            //biz bu 2 sayiyi veya daha büyük sayilari toplayamayiz ama string turunde yazarak toplayabiliriz; 
+            //biz bu 2 sayiyi veya daha büyük sayilari toplayamayiz ama string turunde yazarak toplayabiliriz;
             string sayi1 = "956715610000351152015313331835";
-            string sayi2 = "654355561221313501333815129954";     
+            string sayi2 = "654355561221313501333815129954";
+            Console.WriteLine(sayi1);
+            Console.WriteLine(sayi2);
+            Console.WriteLine("+");
+            Console.WriteLine(new string('-', 60));
             string sonuc = "";
             int sayi1BasamakSayisi = sayi1.Length;
             int sayi2BasamakSayisi = sayi2.Length;
@@ -366,60 +384,62 @@ namespace SortingAlgorithm
             if (sayi1BasamakSayisi > sayi2BasamakSayisi)
                 while (sayi1.Length != sayi2.Length) //basamaklar eşit degilse eşit olana kadar sayilarin basina "0" ekleyelim
                     sayi2 = $"0{sayi2}";
-                
+
             else
                 while (sayi1.Length != sayi2.Length) //basamaklar eşit degilse eşit olana kadar sayilarin basina "0" ekleyelim
                     sayi1 = $"0{sayi1}";
-            
+
 
             for (int i = maxLength - 1; i >= 0; i--)
             {
-                    int toplam = 0;
-                    if (eldeVarmi == true)
-                    {
-                        toplam = int.Parse(sayi1[i].ToString()) + int.Parse(sayi2[i].ToString()) + 1;
-                    }
-                    else
-                    {
-                        toplam = int.Parse(sayi1[i].ToString()) + int.Parse(sayi2[i].ToString());
-                    }
-                    if (toplam < 10)
-                    {
-                        sonuc += toplam;
-                        eldeVarmi = false;
-                    }
-                    else
-                    {
-                        artan = toplam % 10;
-                        sonuc += artan;
-                        eldeVarmi = true;
-                    }
-                    if (i == 0 && eldeVarmi)
-                    {
-                        sonuc += 1;
-                    }
+                int toplam = 0;
+                if (eldeVarmi == true)
+                {
+                    toplam = int.Parse(sayi1[i].ToString()) + int.Parse(sayi2[i].ToString()) + 1;
+                }
+                else
+                {
+                    toplam = int.Parse(sayi1[i].ToString()) + int.Parse(sayi2[i].ToString());
+                }
+                if (toplam < 10)
+                {
+                    sonuc += toplam;
+                    eldeVarmi = false;
+                }
+                else
+                {
+                    artan = toplam % 10;
+                    sonuc += artan;
+                    eldeVarmi = true;
+                }
+                if (i == 0 && eldeVarmi)
+                {
+                    sonuc += 1;
+                }
             }
             string tersCevir = new string(sonuc.Reverse().ToArray());
             Console.WriteLine(tersCevir);
 
+            //    Console.ReadLine();
+            //}
+
+
+            //private static int MaxSayi(int[]sayilar)
+            //{
+            //    int enBuyukEleman = 0;
+            //     //en buyuk elemanı bul
+            //    for (int i = 0; i < sayilar.Length; i++)
+            //    {
+            //        if (sayilar[i] > enBuyukEleman)
+            //        {
+            //            enBuyukEleman = sayilar[i];
+            //        }
+            //    }
+            //    Console.WriteLine(enBuyukEleman);
+            //    return enBuyukEleman;
+
+            //}
             Console.ReadLine();
         }
-        
-
-        //private static int MaxSayi(int[]sayilar)
-        //{
-        //    int enBuyukEleman = 0;
-        //     //en buyuk elemanı bul
-        //    for (int i = 0; i < sayilar.Length; i++)
-        //    {
-        //        if (sayilar[i] > enBuyukEleman)
-        //        {
-        //            enBuyukEleman = sayilar[i];
-        //        }
-        //    }
-        //    Console.WriteLine(enBuyukEleman);
-        //    return enBuyukEleman;
-
-        //}
     }
 }
