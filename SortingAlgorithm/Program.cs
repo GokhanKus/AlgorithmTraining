@@ -12,6 +12,8 @@ namespace SortingAlgorithm
     {
         static void Main(string[] args)
         {
+            #region BubbleSort 1
+
             //verilen dizideki örn:
             //[6, 2, 35, 61, 24, 5] [5,35,61,2,6,24] olarak sırala önce tekler sonra çiftleri sıralı olarak ata
             //Selection sort algorithm
@@ -39,10 +41,9 @@ namespace SortingAlgorithm
             //{
             //    Console.Write(" " + item);
             //}
+            #endregion
 
-            //int[] diziler = { 1, 2, 56, 33, 74, 3 };
-            //MaxSayi(diziler);
-
+            #region BubbleSort 2
             //BubbleSort Algorithm
             //int[] unSorted = { 1, 5, 0, 6, 22, 7, 4, 73 };
             ////int[] unSorted = { 5, 1, 6, 0, 73, 22, 7, 4 };
@@ -68,6 +69,9 @@ namespace SortingAlgorithm
             //Console.WriteLine();
             //Console.WriteLine(sayac);
 
+            #endregion
+
+            #region 1'den 25'e kadar olan sayilari rastgele yazdir
 
             //1den 25e kadar olan sayıları rastgele yazdırma
             //Random rnd = new Random();
@@ -106,6 +110,9 @@ namespace SortingAlgorithm
             //    Console.WriteLine(randomNumber);   //4 yazdırıldı
             //    numbers.RemoveAt(index);           //3.index olan 4 kaldırıldı ve numbers.Count 25ten 24e düştü
             //}
+            #endregion
+
+            #region Film listesindeki duplikeleri discard etme
 
             //film listesindeki duplicate olanlari listeden cikar
             //string splitingLine = new string('-', 60);
@@ -174,7 +181,9 @@ namespace SortingAlgorithm
 
             //Console.WriteLine(splitingLine);
             //Console.WriteLine($"duplikeleri sildikten sonra {totalMovieCount} adet film kaldi");
+            #endregion
 
+            #region girilen sayinin asal carpanlarini yazdirma
 
             //girilen sayinin asal carpanlarini yazdirma
             //Console.Write("Asal carpanlarina ayrilacak sayiyi gir :");
@@ -214,7 +223,9 @@ namespace SortingAlgorithm
             //}
             //Console.WriteLine($"sayinin toplam {bolenSayilarToplami} adet boleni vardır");
             //Console.ReadLine();
+            #endregion
 
+            #region Ardisik Sayilar Toplami
 
             /*
             * 1 + 2 = 3
@@ -259,8 +270,10 @@ namespace SortingAlgorithm
             //    }
             //    Console.WriteLine();
             //}
+            #endregion
 
-            #region BlackJack
+            #region Blackjack
+
             //string response = string.Empty;
 
             //int jack = 10;
@@ -345,6 +358,7 @@ namespace SortingAlgorithm
             //} while (response != "H".ToLower());
             #endregion
 
+            #region Fibonacci
             //fibonacci 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 ...
             //int firstOne = 1;
             //int secondOne = 1;
@@ -362,83 +376,116 @@ namespace SortingAlgorithm
             //{
             //    Console.WriteLine(fiboTerm);
             //}
+            #endregion
+
+            #region 30 basamaklı 2 sayiyi toplama
 
             //long q = 9223372036854775807; long 8 byte'dır yani 64 bit ve alabilecegi max deger 2^64 -1 dir = 9223372036854775807 (19 basamaklı)
             //int w = 2147483647;            int 4 byte'dır yani 32 bit ve alabilecegi max deger 2^32 -1 dir = 2147483647          (10 basamaklı)
             //biz bu 2 sayiyi veya daha büyük sayilari toplayamayiz ama string turunde yazarak toplayabiliriz;
-            string sayi1 = "956715610000351152015313331835";
-            string sayi2 = "654355561221313501333815129954";
-            Console.WriteLine(sayi1);
-            Console.WriteLine(sayi2);
-            Console.WriteLine("+");
-            Console.WriteLine(new string('-', 60));
-            string sonuc = "";
-            int sayi1BasamakSayisi = sayi1.Length;
-            int sayi2BasamakSayisi = sayi2.Length;
-            int maxLength = Math.Max(sayi1BasamakSayisi,sayi2BasamakSayisi);
-            int artan = 0;//ornegin 6 + 7 = 13 bu kisimda 3 degeri tutulur.
-            bool eldeVarmi = false; //elde varsa bir sonraki basamak degerini bir artiracagiz.
+            //string sayi1 = "956715610000351152015313331835";
+            //string sayi2 = "654355561221313501333815129954";
+            //Console.WriteLine(sayi1);
+            //Console.WriteLine(sayi2);
+            //Console.WriteLine("+");
+            //Console.WriteLine(new string('-', 60));
+            //string sonuc = "";
+            //int sayi1BasamakSayisi = sayi1.Length;
+            //int sayi2BasamakSayisi = sayi2.Length;
+            //int maxLength = Math.Max(sayi1BasamakSayisi,sayi2BasamakSayisi);
+            //int artan = 0;//ornegin 6 + 7 = 13 bu kisimda 3 degeri tutulur.
+            //bool eldeVarmi = false; //elde varsa bir sonraki basamak degerini bir artiracagiz.
 
 
-            //toplama islemine baslamadan once basamak degerlerini esitleyelim
-            if (sayi1BasamakSayisi > sayi2BasamakSayisi)
-                while (sayi1.Length != sayi2.Length) //basamaklar eşit degilse eşit olana kadar sayilarin basina "0" ekleyelim
-                    sayi2 = $"0{sayi2}";
+            ////toplama islemine baslamadan once basamak degerlerini esitleyelim
+            //if (sayi1BasamakSayisi > sayi2BasamakSayisi)
+            //    while (sayi1.Length != sayi2.Length) //basamaklar eşit degilse eşit olana kadar sayilarin basina "0" ekleyelim
+            //        sayi2 = $"0{sayi2}";
 
-            else
-                while (sayi1.Length != sayi2.Length) //basamaklar eşit degilse eşit olana kadar sayilarin basina "0" ekleyelim
-                    sayi1 = $"0{sayi1}";
+            //else
+            //    while (sayi1.Length != sayi2.Length) //basamaklar eşit degilse eşit olana kadar sayilarin basina "0" ekleyelim
+            //        sayi1 = $"0{sayi1}";
 
 
-            for (int i = maxLength - 1; i >= 0; i--)
-            {
-                int toplam = 0;
-                if (eldeVarmi == true)
-                {
-                    toplam = int.Parse(sayi1[i].ToString()) + int.Parse(sayi2[i].ToString()) + 1;
-                }
-                else
-                {
-                    toplam = int.Parse(sayi1[i].ToString()) + int.Parse(sayi2[i].ToString());
-                }
-                if (toplam < 10)
-                {
-                    sonuc += toplam;
-                    eldeVarmi = false;
-                }
-                else
-                {
-                    artan = toplam % 10;
-                    sonuc += artan;
-                    eldeVarmi = true;
-                }
-                if (i == 0 && eldeVarmi)
-                {
-                    sonuc += 1;
-                }
-            }
-            string tersCevir = new string(sonuc.Reverse().ToArray());
-            Console.WriteLine(tersCevir);
+            //for (int i = maxLength - 1; i >= 0; i--)
+            //{
+            //    int toplam = 0;
+            //    if (eldeVarmi == true)
+            //    {
+            //        toplam = int.Parse(sayi1[i].ToString()) + int.Parse(sayi2[i].ToString()) + 1;
+            //    }
+            //    else
+            //    {
+            //        toplam = int.Parse(sayi1[i].ToString()) + int.Parse(sayi2[i].ToString());
+            //    }
+            //    if (toplam < 10)
+            //    {
+            //        sonuc += toplam;
+            //        eldeVarmi = false;
+            //    }
+            //    else
+            //    {
+            //        artan = toplam % 10;
+            //        sonuc += artan;
+            //        eldeVarmi = true;
+            //    }
+            //    if (i == 0 && eldeVarmi)
+            //    {
+            //        sonuc += 1;
+            //    }
+            //}
+            //string tersCevir = new string(sonuc.Reverse().ToArray());
+            //Console.WriteLine(tersCevir);
 
             //    Console.ReadLine();
-            //}
 
+            #endregion
 
-            //private static int MaxSayi(int[]sayilar)
-            //{
-            //    int enBuyukEleman = 0;
-            //     //en buyuk elemanı bul
-            //    for (int i = 0; i < sayilar.Length; i++)
-            //    {
-            //        if (sayilar[i] > enBuyukEleman)
-            //        {
-            //            enBuyukEleman = sayilar[i];
-            //        }
-            //    }
-            //    Console.WriteLine(enBuyukEleman);
-            //    return enBuyukEleman;
+            /*Her asal icin pisagor uclusu vardır (2 hariç)
+            x^2 = (y) + (y+1) burada y+1 hipotenus olsun
+            x asali icin x^2 = (y) + (y+1) olur veya 
+            kisacasi x asalinin karesi, ardisik 2 sayinin toplamidir
+            */
 
-            //}
+            /* algoritmasi;
+               1 - 100e kadar olan sayilari döngüyle kontrol et
+               2 - asal olanları tut ve yazdır
+            */
+            bool asalmi = false;
+            List<int> asalKisaKenarlar = new List<int>();
+            List<int> ikinciKenarlar = new List<int>();
+            List<int> HipotenusKenarlar = new List<int>();
+
+            //burada 100'e kadar olan asal kisakenarlari bulduk ve listeye atadik.
+            for (int kisaKenar = 3; kisaKenar < 100; kisaKenar += 2)
+            {
+                for (int kareKok = (int)Math.Sqrt(kisaKenar) + 1; kareKok >= 2; kareKok--)
+                {
+                    if (kisaKenar % kareKok == 0)
+                    {
+                        asalmi = false;
+                        break;
+                    }
+                    else
+                    {
+                        asalmi = true;
+                    }
+                }
+                if (asalmi)
+                {
+                    asalKisaKenarlar.Add(kisaKenar);
+                }
+            }
+            //asalKisaKenarlar.ForEach(k => { Console.WriteLine(k); });
+
+            //ikinci ve hipotenüs kenarlarını listeye atayalım
+            for (int i = 0; i < asalKisaKenarlar.Count; i++)
+            {
+                ikinciKenarlar.Add((int)(Math.Pow(asalKisaKenarlar[i], 2)) / 2);
+                HipotenusKenarlar.Add(ikinciKenarlar[i]);
+                Console.WriteLine($"{asalKisaKenarlar[i]} - {ikinciKenarlar[i]} - {++HipotenusKenarlar[i]}");
+            }
+
             Console.ReadLine();
         }
     }
