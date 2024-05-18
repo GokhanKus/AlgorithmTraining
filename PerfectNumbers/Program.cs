@@ -3,7 +3,6 @@ namespace PerfectNumbers
 {
 	internal class Program
 	{
-		//2 bitlik yazdır
 		static void Main(string[] args)
 		{
 			//bir sayinin bolenleri toplamı o sayiya eşitse o sayi perfect sayıdır orn: 28 perfect number => 1 + 2 + 4 + 7 + 14 = 28
