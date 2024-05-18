@@ -11,3 +11,5 @@
 #### 30 basamaklı 2 sayıyı toplama - Sums of 2 numbers with 30 digits
 ![image](https://github.com/GokhanKus/AlgorithmTraining/assets/40137766/b87a8b96-65b1-40de-900a-22e152598ca8)
 
+#### Her asal sayi icin pisagor üçlüsü vardır - for any prime number has a pythagorean triple
+![image](https://github.com/GokhanKus/AlgorithmTraining/assets/40137766/976ea130-dc5e-4e81-b9bd-bb689ee720d3)
