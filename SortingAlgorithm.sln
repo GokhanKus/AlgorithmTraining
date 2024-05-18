@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumsOfConsecutiveNumbers", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PythagoreanTriple", "PythagoreanTriple\PythagoreanTriple.csproj", "{A81892CA-63DC-40E7-B61B-5EB99E088231}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfectNumbers", "PerfectNumbers\PerfectNumbers.csproj", "{2940CA00-81D3-4263-9EE6-1AA99A58C41F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{A81892CA-63DC-40E7-B61B-5EB99E088231}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A81892CA-63DC-40E7-B61B-5EB99E088231}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A81892CA-63DC-40E7-B61B-5EB99E088231}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2940CA00-81D3-4263-9EE6-1AA99A58C41F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2940CA00-81D3-4263-9EE6-1AA99A58C41F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2940CA00-81D3-4263-9EE6-1AA99A58C41F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2940CA00-81D3-4263-9EE6-1AA99A58C41F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

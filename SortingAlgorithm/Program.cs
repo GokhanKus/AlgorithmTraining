@@ -69,7 +69,6 @@ namespace SortingAlgorithm
 
 			#endregion
 
-			//perfect numbers, 2 bitlik yazdırma
 		}
 
 		private static int Swap(int[] unSorted, int j)
