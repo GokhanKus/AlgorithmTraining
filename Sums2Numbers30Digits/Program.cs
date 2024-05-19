@@ -7,8 +7,8 @@
 			//long q = 9223372036854775807; long 8 byte'dır yani 64 bit ve alabilecegi max deger 2^64 -1 dir = 9223372036854775807 (19 basamaklı)
 			//int w = 2147483647; int 4 byte'dır yani 32 bit ve alabilecegi max deger 2^32 -1 dir = 2147483647          (10 basamaklı)
 			//biz bu 2 sayiyi veya daha büyük sayilari toplayamayiz ama string turunde yazarak toplayabiliriz;
-			string sayi1 = "956715610000351152015313331835";
-			string sayi2 = "654355561221313501333815129954";
+			string sayi1 = "956765165165065011425200515313331835";
+			string sayi2 = "454045213165102351333815145299000054";
 			Console.WriteLine(sayi1);
 			Console.WriteLine(sayi2);
 			Console.WriteLine("+");
