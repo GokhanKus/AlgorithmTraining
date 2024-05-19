@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecimalToBinary", "DecimalT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumsOfNumber'sDigit", "SumsOfNumber'sDigit\SumsOfNumber'sDigit.csproj", "{70601218-0E97-41A8-93F0-8071F29B8DBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MostFrequentElementInArray", "MostFrequentElementInArray\MostFrequentElementInArray.csproj", "{2FF45F31-140F-413C-A73F-02972D831848}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{70601218-0E97-41A8-93F0-8071F29B8DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70601218-0E97-41A8-93F0-8071F29B8DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70601218-0E97-41A8-93F0-8071F29B8DBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FF45F31-140F-413C-A73F-02972D831848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FF45F31-140F-413C-A73F-02972D831848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FF45F31-140F-413C-A73F-02972D831848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FF45F31-140F-413C-A73F-02972D831848}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
