@@ -13,7 +13,7 @@
 			Console.WriteLine(sayi2);
 			Console.WriteLine("+");
 			Console.WriteLine(new string('-', 60));
-            string sonuc = "";
+			string sonuc = "";
 			int sayi1BasamakSayisi = sayi1.Length;
 			int sayi2BasamakSayisi = sayi2.Length;
 			int maxLength = Math.Max(sayi1BasamakSayisi, sayi2BasamakSayisi);
@@ -42,22 +42,21 @@
 				}
 				if (toplam < 10)
 				{
-					sonuc += toplam;
+					sonuc = toplam + sonuc;
 					eldeVarmi = false;
 				}
 				else
 				{
 					artan = toplam % 10;
-					sonuc += artan;
+					sonuc = artan + sonuc;
 					eldeVarmi = true;
 				}
 				if (i == 0 && eldeVarmi)
 				{
-					sonuc += 1;
+					sonuc = 1 + sonuc;
 				}
 			}
-			string tersCevir = new string(sonuc.Reverse().ToArray());
-			Console.WriteLine(tersCevir);
+			Console.WriteLine(sonuc);
 
 			Console.ReadLine();
 
