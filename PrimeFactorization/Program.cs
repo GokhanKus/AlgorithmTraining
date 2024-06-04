@@ -8,7 +8,7 @@
 
 			//girilen sayinin asal carpanlarini yazdirma
 			Console.Write("Asal carpanlarina ayrilacak sayiyi gir :");
-			int girilenSayi = int.Parse(Console.ReadLine());
+			int girilenSayi = Convert.ToInt32(Console.ReadLine());
 			int sayi = (girilenSayi / 2) + 1;//2 ve 3 degerleri girilirse..
 			bool asalmi = true;
 			Dictionary<int, int> asalCarpanlar = new Dictionary<int, int>();

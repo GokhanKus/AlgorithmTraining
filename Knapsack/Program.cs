@@ -1,4 +1,5 @@
-﻿namespace Knapsack
+﻿
+namespace Knapsack
 {
 	internal class Program
 	{
@@ -10,18 +11,17 @@
 
 
 			int capacity = 10;
-			int[] values = { 60, 100, 120 };
-			int[] weights = { 5, 3, 7 };
+			int[] values = { 80, 50, 90 };
+			int[] weights = { 7, 3, 5 };
 			int n = values.Length;
 
-			int maxValue = KnapsackDP(capacity, weights, values, n);
+			int maxValue = KnapsackDB(capacity, values, weights, n);
 			Console.WriteLine("Çantanın en yüksek değeri: " + maxValue);
 		}
 
-		static int KnapsackDP(int capacity, int[] weights, int[] values, int n)
+		private static int KnapsackDB(int capacity, int[] values, int[] weights, int n)
 		{
 			int[,] K = new int[n + 1, capacity + 1];
-
 			for (int k = 0; k <= n; k++)
 			{
 				for (int w = 0; w <= capacity; w++)
@@ -29,14 +29,16 @@
 					if (k == 0 || w == 0)
 						K[k, w] = 0;
 					else if (weights[k - 1] <= w)
-						K[k, w] = Math.Max(values[k - 1] + K[k - 1, w - weights[k - 1]], K[k - 1, w]);
+					{
+						int a = values[k - 1] + K[k - 1, w - weights[k - 1]];
+						int b = K[k - 1, w]; //onceki satirin ayni sütunu
+						K[k, w] = Math.Max(a, b);
+					}
 					else
 						K[k, w] = K[k - 1, w];
 				}
 			}
-
-			return K[n, capacity]; //n. satir ve capacity. sütun yani 4'e 16
+			return K[n, capacity];
 		}
-
 	}
 }

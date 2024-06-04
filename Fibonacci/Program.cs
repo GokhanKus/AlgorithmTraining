@@ -13,13 +13,13 @@
 				//Console.Write($"{firstOne}, {secondOne}, ");
 				fiboList.Add(firstOne);
 				fiboList.Add(secondOne);
-				firstOne = secondOne + firstOne;
-				secondOne = firstOne + secondOne;
+				firstOne += secondOne;
+				secondOne += firstOne;
 			}
 
 			foreach (var fiboTerm in fiboList)
 			{
-				Console.WriteLine(fiboTerm);
+				Console.Write($"{fiboTerm} - ");
 			}
 		}
 	}

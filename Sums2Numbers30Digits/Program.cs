@@ -7,8 +7,9 @@
 			//long q = 9223372036854775807; long 8 byte'dır yani 64 bit ve alabilecegi max deger 2^64 -1 dir = 9223372036854775807 (19 basamaklı)
 			//int w = 2147483647; int 4 byte'dır yani 32 bit ve alabilecegi max deger 2^32 -1 dir = 2147483647          (10 basamaklı)
 			//biz bu 2 sayiyi veya daha büyük sayilari toplayamayiz ama string turunde yazarak toplayabiliriz;
-			string sayi1 = "956765165165065011425200515313331835";
-			string sayi2 = "454045213165102351333815145299000054";
+			string sayi1 = "944545545477344078665";
+			string sayi2 = "45045245454527963122878";
+
 			Console.WriteLine(sayi1);
 			Console.WriteLine(sayi2);
 			Console.WriteLine("+");
@@ -32,13 +33,16 @@
 			for (int i = maxLength - 1; i >= 0; i--)
 			{
 				int toplam = 0;
+				int rakam1 = (byte)sayi1[i] - 48;
+				int rakam2 = (byte)sayi2[i] - 48;
+
 				if (eldeVarmi == true)
 				{
-					toplam = int.Parse(sayi1[i].ToString()) + int.Parse(sayi2[i].ToString()) + 1;
+					toplam = rakam1 + rakam2 + 1;
 				}
 				else
 				{
-					toplam = int.Parse(sayi1[i].ToString()) + int.Parse(sayi2[i].ToString());
+					toplam = rakam1 + rakam2;
 				}
 				if (toplam < 10)
 				{
@@ -51,11 +55,13 @@
 					sonuc = artan + sonuc;
 					eldeVarmi = true;
 				}
-				if (i == 0 && eldeVarmi)
-				{
-					sonuc = 1 + sonuc;
-				}
+
 			}
+			if (eldeVarmi)
+			{
+				sonuc = 1 + sonuc;
+			}
+
 			Console.WriteLine(sonuc);
 
 			Console.ReadLine();
