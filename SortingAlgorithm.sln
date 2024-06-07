@@ -33,7 +33,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCKNAlgorithm", "TCKNAlgori
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Knapsack", "Knapsack\Knapsack.csproj", "{07F94A5D-2612-4A9A-AE98-6301165D514B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UglyNumbers", "UglyNumbers\UglyNumbers.csproj", "{2E27DE89-DC6A-46E0-94EF-79C620590851}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UglyNumbers", "UglyNumbers\UglyNumbers.csproj", "{2E27DE89-DC6A-46E0-94EF-79C620590851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Radical Numbers(Square Root)", "Radical Numbers(Square Root)\Radical Numbers(Square Root).csproj", "{CE067A61-98E4-406A-BEDD-24432917897D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{2E27DE89-DC6A-46E0-94EF-79C620590851}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E27DE89-DC6A-46E0-94EF-79C620590851}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E27DE89-DC6A-46E0-94EF-79C620590851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE067A61-98E4-406A-BEDD-24432917897D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE067A61-98E4-406A-BEDD-24432917897D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE067A61-98E4-406A-BEDD-24432917897D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE067A61-98E4-406A-BEDD-24432917897D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
