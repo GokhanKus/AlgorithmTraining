@@ -39,7 +39,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Radical Numbers(Square Root
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GCD&LCM", "GCD&LCM\GCD&LCM.csproj", "{8FD59F57-913A-40C8-9293-16BC056882DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptedMessage", "EncryptedMessage\EncryptedMessage.csproj", "{5C8F3488-2CF0-41CA-BF9A-01114E27E4F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncryptedMessage", "EncryptedMessage\EncryptedMessage.csproj", "{5C8F3488-2CF0-41CA-BF9A-01114E27E4F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreedyAlgorithm", "GreedyAlgorithm\GreedyAlgorithm.csproj", "{478015C1-C102-4AAA-9ACB-BE4B15A007C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{5C8F3488-2CF0-41CA-BF9A-01114E27E4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C8F3488-2CF0-41CA-BF9A-01114E27E4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C8F3488-2CF0-41CA-BF9A-01114E27E4F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{478015C1-C102-4AAA-9ACB-BE4B15A007C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{478015C1-C102-4AAA-9ACB-BE4B15A007C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{478015C1-C102-4AAA-9ACB-BE4B15A007C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{478015C1-C102-4AAA-9ACB-BE4B15A007C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
