@@ -43,6 +43,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncryptedMessage", "Encrypt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreedyAlgorithm", "GreedyAlgorithm\GreedyAlgorithm.csproj", "{478015C1-C102-4AAA-9ACB-BE4B15A007C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindTheLongestConsecutiveInArray", "FindTheLongestConsecutiveInArray\FindTheLongestConsecutiveInArray.csproj", "{3BC4D7C8-7D9A-4AD8-9EBB-427F292B9B64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{478015C1-C102-4AAA-9ACB-BE4B15A007C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{478015C1-C102-4AAA-9ACB-BE4B15A007C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{478015C1-C102-4AAA-9ACB-BE4B15A007C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BC4D7C8-7D9A-4AD8-9EBB-427F292B9B64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BC4D7C8-7D9A-4AD8-9EBB-427F292B9B64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BC4D7C8-7D9A-4AD8-9EBB-427F292B9B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BC4D7C8-7D9A-4AD8-9EBB-427F292B9B64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
